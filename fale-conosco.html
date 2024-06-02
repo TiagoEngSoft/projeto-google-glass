@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre o Google Glass</title>
+    <script src="js/funcoes.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <script>
+      function calc_total(){
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 1500;
+        document.getElementById('cTot').value = tot;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="interface">
+      <header id="cabecalho">
+        <hgroup>
+          <h1>Google Glass</h1>
+          <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        <img id="icone" src="image/glass-oculos-preto-peq.png"/>
+        <nav id="menu">
+          <h1>Menu Principal</h1>
+          <ul>
+            <li onmouseout="mudafoto('image/contato.png')" onmousemove="mudafoto('image/home.png')"><a href="index.html">Home</a></li>
+            <li onmouseout="mudafoto('image/contato.png')" onmousemove="mudafoto('image/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseout="mudafoto('image/contato.png')" onmousemove="mudafoto('image/Fotos.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseout="mudafoto('image/contato.png')" onmousemove="mudafoto('image/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseout="mudafoto('image/contato.png')" onmousemove="mudafoto('image/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="conteudo-full">
+        <article id="noticia-principal">
+          <header id="cabecalho-artigo">
+            <hgroup>
+              <h3>Fale Conosco > Contato</h3>
+              <h1>Formulário de Contato</h1>
+              <h2>por Tiago Santos</h2>
+              <h3 class="direita">Atualizado em 11/julho/2020</h3>
+            </hgroup>
+          </header>
+          
+          <!-- Formatação do Formulário-->
+          <form method="POST" id="fContato" action="mailto:thiagosist8801@gmail.com" oninput="calc_total();">
+            <!--Inicio do formulário **get = passatudo pela url, mas é mais rápido/ **post = enviados por pacotes -mais seguro, mas é mais lento-->
+            <fieldset id="usuario"><!--Conjunto de campos.-->
+              <legend>
+                Identificação do Usuário
+              </legend><!--Legenda do conjunto de campos-->
+                <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="22" placeholder="Nome completo"></p>
+                <p><label for="cSenha">Senha:</label><input type="password" nome="tSenha" id="cSenha" size="10" maxlength="10" placeholder="10 Dígitos"></p>
+                <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20" maxlength="25"></p>
+              <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                <!--Tem que ter o mesmo atributo=nome para não marcar os dois butões.-->
+                <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label><br>
+                <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                <!--O label servil para não ter que clicar na bolinha, mas no nome também.-->
+              </fieldset>
+              <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></p>
+            </fieldset>  
+            <fieldset id="endereco">
+              <legend>Endereço do Usuário</legend>
+                  <p><label for="cRua">Logradouro:</label><input type="text" nome="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."></p>
+                  <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                  <p>
+                    <label for="cEst">Estado:</label>
+                    <select nome="tEst" id="cEst"><!--Cria caixas combinadas-->
+                      <optgroup label="Região Nordeste"><!--Coloca grupo de opções nos estados-->
+                        <option selected value="ce">CE</option><!--value - envia para o banco de dados o valor informado(parametro)-->
+                        <option value="al">AL</option><!-- Opções-->
+                        <option value="pe">PE</option>
+                      </optgroup>
+                      <optgroup label="Região Sul">
+                        <option value="ce">SP</option>
+                        <option value="al">RJ</option>
+                        <option value="pe">RS</option>
+                      </optgroup>
+                    </select>
+                  </p>
+
+                  <p><label for="cCit">Cidade:</label><input type="text" name="tCit" id="cCit" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                  <datalist id="cidades">
+                    <option>Juazeiro do Norte</option>
+                    <option>Crato</option>
+                    <option>Barbalha</option>
+                  </datalist>
+            </fieldset> 
+
+            <fieldset id="mensagem">
+              <legend>Mensagem do Usuário</legend>
+                <p>
+                  <label for="cUrg">Grau de Urgência:&nbsp;&nbsp;</label>Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max
+                </p><!--step (Salto)-->
+                <p>
+                  <label for="cMsg">Mensagem:</label>
+                  <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe sua mensagem"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset id="pedido">
+              <legend>Quero um Google Glass</legend>
+                <p><label for="cPed"><input type="checkbox" name="tPed" id="cPed" checked>
+                  Gostaria de adquirir um Google Glass quando disponível</label>
+                </p>
+                <p><label for="cCor">  Cor:</label><input type="color" name="tCor" id="cCor" value="#0000ff"></p>
+                <p><label for="cQtd"></label>Quantidade:<input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"></label></p>
+                <p><label for="cTot"> Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+                <!--(readonly) informa que o input é somente para leitura-->
+            </fieldset>     
+            <!--<input type="submit" name="" id="" value="Enviar">-->
+            <input type="image" name="tEnviar" src="image/botao-enviar.png">
+          </form>
+        </article>
+      </section>
+      <footer id="rodape">
+        <p>&copy;Copyright 2020 - by Tiago Santos<br></p>
+        <p><a href="image/500PX 5.png" target="blank"><img src="image/500PX-5.png" alt="Ícone Facebook"></a>&nbsp;
+        <a href="image/500PX 25.png" target="blank"><img src="image/500PX-25.gif" alt="Ícone Instagram"></a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre o Google Glass</title>
+    <script src="js/funcoes.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+  </head>
+  <body>
+    <div id="interface">
+      <header id="cabecalho">
+        <hgroup>
+          <h1>Google Glass</h1>
+          <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        <img id="icone" src="image/glass-oculos-preto-peq.png"/>
+        <nav id="menu">
+          <h1>Menu Principal</h1>
+          <ul>
+            <li onmouseout="mudafoto('image/multimidia.png')" onmousemove="mudafoto('image/home.png')"><a href="index.html">Home</a></li>
+            <li onmouseout="mudafoto('image/multimidia.png')" onmousemove="mudafoto('image/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseout="mudafoto('image/multimidia.png')" onmousemove="mudafoto('image/Fotos.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseout="mudafoto('image/multimidia.png')" onmousemove="mudafoto('image/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseout="mudafoto('image/multimidia.png')" onmousemove="mudafoto('image/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="conteudo-full">
+        <article id="noticia-principal">
+          <header id="cabecalho-artigo">
+            <hgroup>
+              <h3>Glass > Fotos</h3>
+              <h1>Multimídia do Google Glass</h1>
+              <h2>por Tiago Santos</h2>
+              <h3 class="direita">Atualizado em 11/julho/2020</h3>
+            </hgroup>
+          </header>
+            <div id="tv-radio">
+              <audio id="musica" controls><!--Convertendo os arquivos de audio aac/ogg/mp3-->
+                <source src="media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                <source src="media/2009-lovers-carvings-bibio.oggvorbis.ogg" type="audio/ogg"/>
+                <source src="media/2009-lovers-carvings-bibio.aac" type="audio/x-aac"/>
+                  Desculpe, mas não foi possivel carregar o áudio.<!--Caso o navegador não consiga execultar nenhum áudio-->
+              </audio>
+              <video id="video" controls poster="image/video-mini03.jpg"><!--Convertendo os arquivos de audio webM/ogv/mp4-->
+                <source src="media/getting-started.mp4" type="video/mp4"/>
+                <source src="media/getting-started.ogv" type="video/ogg"/>
+                <source src="media/getting-started.webm" type="video/ogg"/>
+                  Desculpe, mas não foi possivel carregar o áudio.<!--Caso o navegador não consiga execultar nenhum vídeo-->
+              </video>
+            </div>
+            <!-- ** Importando video do youtube
+            <iframe width="400" height="280" src="https://www.youtube.com/embed/4EvNxWhskf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            -->  
+          </article>
+      </section>    
+      <footer id="rodape">
+        <p>&copy;Copyright 2020 - by Tiago Santos<br></p>
+        <p><a href="image/500PX 5.png" target="blank"><img src="image/500PX-5.png" alt="Ícone Facebook"></a>&nbsp;
+        <a href="image/500PX 25.png" target="blank"><img src="image/500PX-25.gif" alt="Ícone Instagram"></a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

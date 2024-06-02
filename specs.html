@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tudo Sobre o Google Glass</title>
+        <script src="js/funcoes.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/specs.css">
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup id="cabecalho">
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <img src="image/especificacoes.png"/ id="icone">
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmouseout="mudafoto('image/especificacoes.png')" onmousemove="mudafoto('image/home.png')"><a href="index.html">Home</a></li>
+                        <li onmouseout="mudafoto('image/especificacoes.png')" onmousemove="mudafoto('image/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseout="mudafoto('image/especificacoes.png')" onmousemove="mudafoto('image/Fotos.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseout="mudafoto('image/especificacoes.png')" onmousemove="mudafoto('image/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseout="mudafoto('image/especificacoes.png')" onmousemove="mudafoto('image/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>  
+            </header>
+            <section id="conteudo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                      <hgroup>
+                        <h3>Glass > Especificações</h3>
+                        <h1>Raio-X no Google Glass</h1>
+                        <h2>por Tiago Santos</h2>
+                        <h3 class="direita">Atualizado em 11/julho/2020</h3>
+                      </hgroup>
+                    </header>
+                    Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+                   <section id="conteudo">
+                       <!--Mapeamento de imagem-->
+                        <img src="image/glass-esquema-marcado.jpg" alt="Oculos Glass" usemap="#meumapa"><!--Use map relaciona a imagem ao mapa-->
+                        <map name="meumapa">
+                            <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" alt="Área marcada" target="janela"><!--Superior esquerdo/Inferior direito-->
+                            <area shape="circle" coords="160,245,12" href="google-glass.html#camera" alt="Área marcada" target="janela"><!--Centro/metade da circunferência-->
+                            <area shape="circle" coords="77,52,12" href="google-glass.html#gadgets" alt="Área marcada" target="janela">
+                            <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" alt="Área marcada" target="janela"><!--Coordenada de cada ponto.-->
+                        </map>
+                        <iframe scrolling="no" src="google-glass.html" name="janela" id="frame-spec"></iframe><!--Scrolling tira as barras laterais-->
+                    </section>
+                </article>
+            </section>
+            <footer id="rodape">
+                <p>&copy;Copyright 2020 - by Tiago Santos<br></p>
+                <p><a href="image/500PX 5.png" target="blank"><img src="image/500PX-5.png" alt="Ícone Facebook"></a>&nbsp;
+                <a href="image/500PX 25.png" target="blank"><img src="image/500PX-25.gif" alt="Ícone Instagram"></a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
